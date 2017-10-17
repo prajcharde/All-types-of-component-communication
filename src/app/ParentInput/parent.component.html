@@ -1,0 +1,23 @@
+<h1>Input Binding Example</h1>
+<!--<h3>Parent Panel</h3>-->
+<div class="container">
+    <table class="table">
+      <thead class="thead-inverse">
+            <tr>
+               <th>#</th>
+              <th>Employee Name</th>
+              <th>Employee Email</th>
+           </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <th scope="row">{{employee.empId}}</th>
+                <td>{{employee.empName }}</td>
+                <td>{{employee.empEmail }}</td>    
+                <td><button class="btn btn-success" (click)="logDetails(employee)">Details</button></td>
+        </tbody>
+    </table>
+    
+ <child-input [employeeDetails]="empDetails"></child-input> 
+
+</div>
